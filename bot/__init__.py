@@ -93,7 +93,7 @@ try:
             SUDO_USERS.add(row[0])
     print("Connected to DB")  
 except psycopg2.DatabaseError as error :
-    LOGGER.error(f"Error : {error}")
+    LOGGER.error(error)
     exit(1)
 finally:
     #closing database connection.
